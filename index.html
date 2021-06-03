@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb- ON/OFF</title>
+    <style>
+        img{
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        #toggle{
+            margin-top: 20px;
+            padding: 10px 40px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./images/bublon.jpg" alt="Bulb ON" id="img" >
+    </div>
+   
+  <div>
+    <input type="button" value="OFF"id="toggle">
+  </div>
+
+   <script>
+       document.getElementById('toggle').onclick=function(){
+           let onOFF=document.getElementById('toggle').getAttribute('value')
+            if(onOFF=='ON')
+            {
+                document.getElementById('img').src="./images/bublon.jpg";
+                document.getElementById('toggle').value="OFF";
+            }
+            else
+            {
+                document.getElementById('img').src="./images/bulboff.jpg";
+                document.getElementById('toggle').value="ON";
+            }
+        }
+
+   </script>
+</body>
+</html>
